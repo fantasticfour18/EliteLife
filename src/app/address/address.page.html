@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="navCtrl.back()">
+      <ion-img class="back-btn" src="assets/images/back.svg"></ion-img>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button routerLink="/tabs/search">
+        <ion-img  src="assets/images/loupe.svg" class="srch"></ion-img>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Address</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-grid>
+  <ion-img src="assets/images/app-logo.png"></ion-img>
+  <form [formGroup]="deliveryForm">
+  <div class="delivery-address">
+    <h2>Delivery address</h2>
+    <ion-input type="text" placeholder="Street Address" formControlName="delivery_address_1"></ion-input>
+    <ion-input type="text" placeholder="City" formControlName="delivery_city"></ion-input>
+    <ion-input type="text" placeholder="State" formControlName="delivery_state"></ion-input>
+    <section>
+      <span>
+        <ion-input type="text" placeholder="Postal/Zip Code" formControlName="delivery_area_code"></ion-input>
+      </span>
+      <span>
+        <ion-select  placeholder="Select Country" formControlName="delivery_country">
+          <ion-select-option value="Australia">Australia</ion-select-option>
+        </ion-select>
+      </span>      
+    </section>
+  </div>
+</form>
+  <form [formGroup]="billingForm">
+  <div class="delivery-address">
+    <h2>Billing address</h2>
+    <div class="same-address">
+          <ion-item >
+            <ion-label>Same as Delivery address</ion-label>
+            <ion-checkbox color="primary" slot="start" (ionChange)="change($event)" id='checkboxadd'></ion-checkbox>
+          </ion-item>
+        </div>
+    <ion-input type="text" placeholder="Street Address" *ngIf="!showDiv" formControlName="billing_address_1"></ion-input>
+    <ion-input type="text" placeholder="City" *ngIf="!showDiv" formControlName="billing_city"></ion-input>
+    <ion-input type="text" placeholder="State" *ngIf="!showDiv" formControlName="billing_state"></ion-input>
+    <section *ngIf="!showDiv"> 
+      <span>
+        <ion-input type="number" placeholder="Postal/Zip Code" formControlName="billing_area_code"></ion-input>
+      </span>
+      <span>
+        <ion-select  placeholder="Select Country" formControlName="billing_country">
+          <ion-select-option value="Australia">Australia</ion-select-option>
+        </ion-select>
+      </span>      
+    </section>
+  </div>
+</form>
+  <div class="login-bottom">  
+    <ion-button class="enquirenow" (click)="updateAdd()" *ngIf="showDiv" [disabled]="!deliveryForm.valid">Update</ion-button>
+    <ion-button class="enquirenow" *ngIf="!showDiv" (click)="updateAdd()" [disabled]="!billingForm.valid || !deliveryForm.valid">Update</ion-button>
+  </div>
+  </ion-grid>
+</ion-content>

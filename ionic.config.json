@@ -1,0 +1,7 @@
+{
+  "name": "elitelife2",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

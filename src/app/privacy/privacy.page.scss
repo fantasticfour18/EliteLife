@@ -1,0 +1,27 @@
+ion-toolbar {
+    --padding-start: 15px;
+    --padding-end: 8px;
+    text-transform: capitalize;
+    --background: #fff;
+    ion-title {
+        font-size: 20px;
+        font-family: 'Azo Sans Lt';
+    text-align: center;
+    font-weight:300;
+    }
+}
+
+.privacy-text {
+    margin-top: 20px;
+    font-family: 'Azo Sans Lt';
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0 35px;
+    font-weight: 300;
+}
+
+ion-grid ion-img {
+    max-width: 90px;
+    display: block;
+    margin: 15px auto 0;
+}

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="navCtrl.back()">
+      <ion-img class="back-btn" src="assets/images/back.svg"></ion-img>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button routerLink="/tabs/search">
+        <ion-img src="assets/images/icon-search.png" class="srch"></ion-img>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>My Life Elite</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-grid>
+  <ion-img src="assets/images/app-logo.png"></ion-img>
+  <ion-list>
+    <ion-item>
+      <ion-label>Do you want to receive EL magazine</ion-label>
+      <ion-toggle slot="end"  [(ngModel)]="el_magazine" (ionChange)="sendDetail()"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Do you want to receive notifications on your email</ion-label>
+      <ion-toggle slot="end"   [(ngModel)]="notifi_email" (ionChange)="sendDetail()"></ion-toggle>
+    </ion-item>
+
+    <!-- <ion-item>
+      <ion-label>Face ID</ion-label>
+      <ion-toggle slot="end"   checked></ion-toggle>
+    </ion-item> -->
+    </ion-list>
+</ion-grid>
+</ion-content>

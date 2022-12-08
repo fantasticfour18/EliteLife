@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="navCtrl.back()">
+      <ion-img class="back-btn" src="assets/images/back.svg"></ion-img>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button routerLink="/tabs/search">
+        <!-- <ion-icon slot="icon-only" src="assets/images/icon-search.png"></ion-icon> -->
+        <ion-img  src="assets/images/loupe.svg" class="srch"></ion-img>
+      </ion-button>
+    </ion-buttons>
+  
+    <ion-title>EliteLife</ion-title>
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content>
+<ion-grid class="ion-no-padding">
+  <div class="prooduct-slider">
+    <ion-card>        
+      <ion-card-content>
+        <ion-label>
+          <span *ngFor="let data of postDetail?.post_category"><ion-icon name="bookmark-outline"></ion-icon>{{data}}</span>
+        </ion-label>
+      </ion-card-content>
+      <!-- <img src="assets/images/watch.png" /> -->
+      <swiper [slidesPerView]="1" [centeredSlides]="true">
+        <ng-template swiperSlide *ngFor="let data of postDetail?.easy_gallery_images">
+          <img [src]="data" />
+        </ng-template>
+      </swiper>          
+    </ion-card>
+    <!-- <section>
+      <ion-img src="assets/images/heart.png"></ion-img>
+    </section> -->
+  </div> 
+  <div class="card-content">
+    <h2>{{postDetail?.title}}</h2>
+    <p>{{postDetail?.sub_title}}</p>
+    <h3 *ngIf="postDetail?.price">Price <span>${{postDetail?.price}}</span></h3>
+    <ion-label>
+      <span *ngIf="postDetail?.location"><ion-icon src="assets/images/placeholder.svg"></ion-icon><b >{{postDetail?.location}}</b></span>
+      <div class="date-timeelite">
+        <span  *ngIf="postDetail?.date"><ion-icon src="assets/images/calendar.svg"></ion-icon><b>{{postDetail?.date}}</b></span>
+        <span  *ngIf="postDetail?.time"><ion-icon src="assets/images/clock.svg"></ion-icon><b>{{postDetail?.time}}</b></span>
+      </div>
+    </ion-label>
+    <ion-button routerLink="/contactform/{{postId}}" >Enquire</ion-button>
+    <p [innerHTML]="postDetail?.descrption"></p>
+    <!-- <ion-label>Year: <span>2015</span></ion-label>
+    <ion-label>Reference No: <span>3940R-027</span></ion-label>
+    <ion-label>Movement No: <span>575***</span></ion-label>
+    <ion-label>Case No: <span>439***</span></ion-label>
+    <ion-label>Model Name: <span>3940 Grand Complication</span></ion-label>
+    <ion-label>Material: <span>Rose Gold</span></ion-label>
+    <ion-label>Calibre: <span>240Q automatic</span></ion-label>
+    <ion-label>Bracelet/Strap: <span>Patek Philippe Rose Gold Crocodile strap</span></ion-label>
+    <ion-label>Clasp/Buckle: <span>Patek Philippe Rose Gold Deployment</span></ion-label>
+    <ion-label>Crystal: <span>Sapphire Crystal</span></ion-label>
+    <ion-label>Accessories: <span>Box,guarantee,leather wallet and booklets</span></ion-label> -->
+  </div>
+</ion-grid>
+</ion-content>

@@ -1,0 +1,64 @@
+
+
+ion-label {
+    font-size: 11px;
+    margin-top: 14px;
+    color: #000;
+    font-family: "Azo Sans Lt";
+}
+.tab-selected ion-label {
+    font-size: 10px;
+    margin-top: 14px;
+    color: #000;
+    font-family: 'Azo Sans';
+}
+ion-tab-bar {
+    border: 0;
+    padding: 15px 0 5px;
+    height: 70px;
+}
+
+ion-tab-button {
+    --padding-bottom: 0;
+    min-height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    --ripple-color: transparent;
+}
+.tab-selected {
+    .desktop {
+        display: block;
+        width: 100%;
+        max-width: 25px;
+        height: 25px;
+        object-fit: contain;
+    }
+    .mobile {
+        display: none;
+        width: 100%;
+        max-width: 25px;
+        height: 25px;
+        object-fit: contain;
+    }
+
+ion-label {
+    font-size: 10px;
+    margin-top: 14px;
+    color: #b48f60;
+    font-family: 'Azo Sans';
+}
+}
+.desktop {
+    display: none;
+    width: 100%;
+    max-width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+.mobile {
+    display: block;
+    width: 100%;
+    max-width: 25px;
+    height: 25px;
+    object-fit: contain;
+}

@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "339984553246",
+    "project_id": "elitelife",
+    "storage_bucket": "elitelife.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339984553246:android:b422af0de72ea63bf9a50f",
+        "android_client_info": {
+          "package_name": "com.elitelife.au"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339984553246-93fk42r7siidikqs7h35iiru5nfdhb87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbQ-UdJVzoemEITZeqy-8BkFP3x5x6caw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339984553246-93fk42r7siidikqs7h35iiru5nfdhb87.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339984553246-31gjhttiif10q63kf4ki7i6n20kag1ek.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.elitelife"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339984553246:android:1c09256fd5dde8f0f9a50f",
+        "android_client_info": {
+          "package_name": "io.elitelife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339984553246-93fk42r7siidikqs7h35iiru5nfdhb87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbQ-UdJVzoemEITZeqy-8BkFP3x5x6caw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339984553246-93fk42r7siidikqs7h35iiru5nfdhb87.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339984553246-31gjhttiif10q63kf4ki7i6n20kag1ek.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.elitelife"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

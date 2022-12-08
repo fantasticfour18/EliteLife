@@ -1,0 +1,105 @@
+ion-toolbar {
+    --padding-start: 15px;
+    --padding-end: 8px;
+    text-transform: capitalize;
+    --background: #fff;
+    ion-title {
+        font-size: 24px;
+    font-family: "Linotype Didot";
+    letter-spacing: 1px;
+    text-align: center;
+    margin-left: 11px;
+    }
+    ion-img {
+        width: 16px;
+    }
+}
+
+.privacy-text {
+    margin-top: 20px;
+    font-family: 'Azo Sans Lt';
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0 35px;
+    font-weight: 300;
+}
+
+ion-grid ion-img {
+    max-width: 90px;
+    display: block;
+    margin: 15px auto 0;
+}
+
+ion-grid {
+    padding: 15px;
+}
+
+
+.sender {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 20px 20px 20px 0;
+    max-width: 80%;
+    color: #000;
+    font-size: 13px;
+    line-height: 16px;
+    font-family: 'Azo Sans Lt';
+    float: left;
+    margin-bottom: 20px;
+}
+
+.sender p {
+    margin: 0;
+}
+
+.reciever {
+    background: #1e1f23;
+    padding: 15px;
+    border-radius: 20px 20px 0 20px;
+    max-width: 80%;
+    color: #fff;
+    font-size: 13px;
+    line-height: 16px;
+    font-family: 'Azo Sans Lt';
+    float: right;
+    margin-bottom: 20px;
+}
+
+.reciever p {
+    margin: 0;
+}
+
+ion-footer {
+    padding: 15px;
+}
+
+.type-msg {
+    display: flex;
+}
+
+ion-footer {
+    padding: 15px;
+}
+
+.type-msg ion-icon {
+    font-size: 22px;
+    padding: 5px;
+    color: #3880ff;
+}
+
+
+ion-textarea {
+    margin: 0!important;
+    font-size: 14px!important;
+    --padding-top: 7px;
+    font-family: "Azo Sans Lt";
+}
+
+ion-footer {
+    border-top: 1px solid #e5e5e5;
+
+}
+ion-img.back-btn {
+    height: auto!important;
+    width: 17px;
+}

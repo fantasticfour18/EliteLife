@@ -1,0 +1,61 @@
+<ion-header>
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-img src="assets/images/icon-menu.png" class="mnu"></ion-img>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button routerLink="/tabs/search">
+      <!-- <ion-icon slot="icon-only" src="assets/images/icon-search.png"></ion-icon> -->
+      <ion-icon src="assets/images/loupe.svg" class="srch"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-title>EliteLife</ion-title>
+</ion-toolbar>
+<ion-toolbar class="segment-tool">
+  <ion-segment value="all" scrollable="true">
+    <ion-segment-button value="all" (click)="getAllPost(11)">
+      <ion-label>All</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="{{cat.name}}" *ngFor="let cat of category" (click)="getAllPost(cat.id)"> 
+      <ion-label>{{cat.name}}</ion-label>
+    </ion-segment-button>
+    <!-- <ion-segment-button value="Luxury">
+      <ion-label>Luxury</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="style">
+      <ion-label>Style</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="connections">
+      <ion-label>CONNECTIONS</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="image">
+      <ion-label>IMAGE</ion-label>
+    </ion-segment-button>     -->
+  </ion-segment>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+ 
+<div class="segment-content">
+  <ion-card (click)="gotode(data.id)" *ngFor="let data of allPost">
+    <ion-img [src]="data.easy_gallery_images[0]" class="main-img" ></ion-img>
+    <div class="pricetag" *ngIf="data.price"><span style="color: #ab814b;">$</span>{{data.price}}</div>
+    <ion-card-content>
+      <h6 *ngIf="data.category">{{data.category}}</h6>
+      <h3>{{data.title}}<ion-img src="assets/images/next.svg"></ion-img></h3>
+      <ion-label>
+        <span *ngIf="data.location"><ion-icon src="assets/images/placeholder.svg"></ion-icon><b >{{data.location}}</b></span>
+        <div class="date-timeelite">
+          <span  *ngIf="data.date"><ion-icon src="assets/images/calendar.svg"></ion-icon><b>{{data?.date}}</b></span>
+          <span  *ngIf="data.time"><ion-icon src="assets/images/clock.svg"></ion-icon><b>{{data?.time}}</b></span>
+        </div>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+</div>
+
+</ion-grid>
+</ion-content>

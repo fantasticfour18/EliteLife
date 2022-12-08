@@ -1,0 +1,149 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@import "~swiper/swiper.min.css";
+
+
+@font-face {
+    font-family: 'Linotype Didot';
+    src: url(assets/fonts/DidotLH-Bold.woff2) format('woff2'),
+        url(assets/fonts/DidotLH-Bold.woff) format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linotype Didot';
+    src: url(assets/fonts/DidotLH-Italic.woff2) format('woff2'),
+        url(assets/fonts/DidotLH-Italic.woff) format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Azo Sans Bk';
+    src: url(assets/fonts/AzoSans-Black.woff2) format('woff2'),
+        url(assets/fonts/AzoSans-Black.woff) format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Azo Sans Bk';
+    src: url(assets/fonts/AzoSans-BlackItalic.woff2) format('woff2'),
+        url(assets/fonts/AzoSans-BlackItalic.woff) format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Azo Sans';
+    src: url(assets/fonts/AzoSans-Bold.woff2) format('woff2'),
+        url(assets/fonts/AzoSans-Bold.woff) format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Azo Sans';
+    src: url(assets/fonts/AzoSans-Italic.woff2) format('woff2'),
+        url(assets/fonts/AzoSans-Italic.woff) format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Azo Sans';
+    src: url(assets/fonts/AzoSans-BoldItalic.woff2) format('woff2'),
+        url(assets/fonts/AzoSans-BoldItalic.woff) format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Azo Sans Lt';
+    src: url(assets/fonts/AzoSans-Light.woff2) format('woff2'),
+        url(assets/fonts/AzoSans-Light.woff) format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Azo Sans Lt';
+    src: url(assets/fonts/AzoSans-LightItalic.woff2) format('woff2'),
+        url(assets/fonts/AzoSans-LightItalic.woff) format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Azo Sans Md';
+    src: url(assets/fonts/AzoSans-Medium.woff2) format('woff2'),
+        url(assets/fonts/AzoSans-Medium.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0;
+}
+ion-img.srch {
+    height: auto;
+    width: 21px;
+}
+ion-img.mnu {
+    height: auto;
+    width: 21px;
+}
+
+ion-toolbar {
+    --min-height: 44px;
+}
+
+.header-md::after {
+    background-image: none;
+    display: none;
+}
+
+.card-content-md h3, .card-content-md h4, .card-content-md h5, .card-content-md h6 {
+    font-weight: bold;
+}
+
+.toggle-checked.toggle-icon {
+    background: #fff0!important;
+}

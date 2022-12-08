@@ -1,0 +1,45 @@
+<ion-header>
+<ion-toolbar>
+  <ion-buttons slot="start" (click)="nav.back()">
+    <ion-img class="back-btn" src="assets/images/back.svg"></ion-img>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button routerLink="/tabs/search">
+      <!-- <ion-icon slot="icon-only" src="assets/images/icon-search.png"></ion-icon> -->
+      <ion-img src="assets/images/icon-search.png" class="srch"></ion-img>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-title>Statements</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-grid class="ion-no-padding"  *ngIf="showdata">
+    <!-- <ion-text color="primary"><h6>28 Sep - 28 Oct</h6></ion-text> -->
+   
+      <div class="previous-statements">
+        <ion-list>
+          <ion-list-header class="ion-text-center">
+           <h2>Previous Statements</h2>
+          </ion-list-header>  
+          <ion-label *ngFor="let data of allStatement;let i = index">
+            <div class="pre-statement" (click)="showclass(i)">
+              <h3>{{data.month_date}}</h3>
+              <ion-img src="assets/images/list-arrow.png" slot="end"></ion-img>
+            </div>
+            <ion-slides [options]="slideOpts" id={{i}}>
+                <ion-slide *ngFor="let newData of data[0].activity_date">
+                  <div class="slide">
+                    <ion-img src="assets/images/statement.png"></ion-img>
+                    <div class="statement-content">
+                      <h3><span>live auction</span>EVENING & DAY EDITIONS<ion-img src="assets/images/arrow.png"></ion-img></h3>
+                    </div>        
+                  </div>
+                </ion-slide>
+              </ion-slides>
+          </ion-label>
+          </ion-list>
+      </div>
+  </ion-grid>
+  </ion-content>

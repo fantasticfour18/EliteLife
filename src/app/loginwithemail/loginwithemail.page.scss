@@ -1,0 +1,106 @@
+h1 {
+    font-family: 'Linotype Didot';
+    font-size: 42px;
+    max-width: 240px;
+    text-align: center;
+    margin: 0;
+    display: block;
+    margin: 15% auto 15%;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+form {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 25% 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ion-item {
+    --background: #fafafa;
+    border: 1px solid #dbdbdb;
+    --padding-start: 20px;
+    --inner-padding-end: 0;
+    --inner-border-width: 0;
+    border-radius: 10px;
+    // margin-bottom: 25px;
+    --min-height: 50px;
+    --border-width: 0;
+    span {
+        font-family: 'Azo Sans Lt';
+        font-size: 20px;
+        line-height: 1;
+    }
+    ion-input {
+        font-family: "Azo Sans Lt"!important;
+        font-size: 20px!important;
+    }
+}
+
+ion-button {
+    --border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: "Azo Sans";
+    font-weight: bold;
+    letter-spacing: 1px;
+    --box-shadow: none;
+    margin-top: 25px;
+}
+
+small {
+    color: #f30;
+    margin-top: 15px;
+    display: block;
+}
+
+a.log-link {
+    font-size: 16px;
+    font-family: "Azo Sans Bk";
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+
+a.not-a-member {
+    font-size: 16px;
+    font-family: "Azo Sans Lt";
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    margin-bottom: 0;
+    text-decoration: none;
+    border-bottom: 1px solid #e9e9e9;
+    padding-bottom: 10px;
+}
+
+ion-button.enquirenow {
+    --background: transparent;
+    color: #ab814b;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px;
+}
+
+.login-top {
+    margin-bottom: 120px;
+}
+
+ion-grid {
+    padding: 0 16px!important;
+}
+
+@media only screen and (max-width: 600px) {
+    form {
+        padding: 15% 0 15%;
+    }
+  }

@@ -1,0 +1,48 @@
+<ion-header>
+<ion-toolbar>
+  <ion-buttons slot="start" (click)="navCtrl.back()">
+    <ion-img class="back-btn" src="assets/images/back.svg"></ion-img>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button routerLink="/tabs/search">
+      <ion-img  src="assets/images/loupe.svg" class="srch"></ion-img>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-title>EliteLife</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid class="ion-no-padding">
+  <div class="profile-top">
+    <ion-img src="assets/images/profile-logo.png"></ion-img>
+    <ion-text color="primary">
+      <h2>{{profile?.first_name}} {{profile?.last_name}}</h2>
+    </ion-text>    
+      <p><ion-text color="primary">Membership Number: </ion-text><ion-text color="secondary">{{profile?.membership_number}}</ion-text></p>
+      <p><ion-text color="primary">Ranking: </ion-text><ion-text color="secondary">{{profile?.ranking}}</ion-text></p>
+      <p><ion-text color="primary">Member since: </ion-text><ion-text color="secondary">{{profile?.member_since}}</ion-text></p>  
+    
+  </div>
+  <div class="profile-bottom">
+    <h3>Statement Balance <span class="tooltip"><ion-icon src="assets/images/information1.svg" ></ion-icon>
+      <small class="tooltiptext">Current balance of your account.</small>
+    </span></h3>
+    <b>$<span>{{firstAmount}}<small *ngIf="secAmount">.{{secAmount}}</small></span></b>
+    <ion-button fill="outline">get more</ion-button>
+    <div class="footer-link">
+      <a  routerLink="/tabs/profile/address">Address</a>
+      <a routerLink="/tabs/profile/myelitelife">My Elite Life</a>
+      <a routerLink="/tabs/profile/statement">Statements</a>
+    </div>
+    <div class="footer-link">
+      <a routerLink="/about">About Elite Life</a>
+      <a routerLink="/tabs/trmcndt">T&C</a>
+      <a routerLink="/tabs/profile/privacy">Privacy Policy</a>
+      <a (click)="logout()">Logout</a>
+    </div>
+  </div>
+  
+</ion-grid>
+</ion-content>

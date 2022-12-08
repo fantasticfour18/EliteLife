@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="navCtrl.back()">
+      <ion-img src="assets/images/back.svg"></ion-img>
+    </ion-buttons>
+  
+    <ion-title>About Elite Life</ion-title>
+  </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+<div class="about">
+  <!-- <ion-img src="assets/images/Life.png"></ion-img> -->
+  <!-- <iframe src="https://player.vimeo.com/video/{{contant?.url}}"  frameborder="0" allow="autoplay; fullscreen;" allowfullscreen></iframe> -->
+  <video  src="{{contant?.url}}" autoplay loop playsinline muted controls></video>
+  <!-- <ion-icon name="play-outline"></ion-icon> -->
+</div>
+</ion-content>

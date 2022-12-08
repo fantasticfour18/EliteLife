@@ -1,0 +1,24 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="main" (click)="goto('tabs/main')">
+      <ion-img src="assets/images/icon-home-b.png"  class="mobile"></ion-img>
+      <ion-img src="assets/images/icon-home.png" class="desktop"></ion-img>
+      <ion-label >Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)="call()" >
+      <ion-img src="assets/images/icon-call-b.png" class="mobile"></ion-img>
+      <ion-img src="assets/images/icon-call.png" class="desktop"></ion-img>
+      <ion-label >Speak with Concierge</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)="navCtrl.navigateForward('contactform/null')">
+      <ion-img src="assets/images/icon-chat-b.png" class="mobile"></ion-img>
+      <ion-img src="assets/images/icon-chat.png" class="desktop"></ion-img>
+      <ion-label >Chat with Concierge</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="profile" (click)="goto('tabs/profile')">
+      <ion-img src="assets/images/icon-profile-b.png" class="mobile"></ion-img>
+      <ion-img src="assets/images/icon-profile.png" class="desktop"></ion-img>
+      <ion-label >Profile</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

@@ -1,0 +1,75 @@
+<ion-header>
+<ion-toolbar>
+  <ion-buttons slot="start" (click)="navCtrl.back()">
+    <ion-img src="assets/images/back.svg"></ion-img>
+  </ion-buttons>
+
+  <ion-title>search</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid class="ion-no-padding">
+  <div class="search-box">
+    <ion-item>
+      <ion-input placeholder="" (input)="search()" [(ngModel)]="q"></ion-input>
+      <ion-button routerLink="/tabs/search">
+        <ion-img src="assets/images/icon-search.png" class="srch"></ion-img>
+      </ion-button>
+    </ion-item>
+  </div>
+  <div class="searcg-result">
+    <ion-spinner *ngIf="spinnerLoader"></ion-spinner>
+    <h2>Search results</h2>
+    <ion-card  *ngFor="let data of allPost" (click)="gotode(data.id)">
+      <ion-img [src]="data.easy_gallery_images[0]"></ion-img>
+     <div class="pricetag" *ngIf="data.price"><span style="color: #ab814b;">$</span>{{data.price}}</div>
+      <ion-card-content>
+        <h6 *ngIf="data.category">{{data.category}}</h6>
+        <h3>{{data.title}}</h3>
+        <ion-label>
+          <span *ngIf="data.location"><ion-icon src="assets/images/placeholder.svg"></ion-icon><b >{{data.location}}</b></span>
+          <div class="date-timeelite">
+            <span *ngIf="data.date"><ion-icon src="assets/images/calendar.svg"></ion-icon><b>{{data.date}}</b></span>
+            <span *ngIf="data.time"><ion-icon src="assets/images/clock.svg"></ion-icon><b>{{data.time}}</b></span>
+          </div>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+    <!-- <ion-card (click)="gotode(data.id)" *ngFor="let data of allPost">
+      <ion-img [src]="data.easy_gallery_images[0]" class="main-img" ></ion-img>
+      <div class="pricetag" *ngIf="data.price">{{data.price}}</div>
+      <ion-card-content>
+        <h6 *ngIf="data.category">{{data.category}}</h6>
+        <h3>{{data.title}}<ion-img src="assets/images/next.svg"></ion-img></h3>
+        <ion-label>
+          <span *ngIf="data.location"><ion-icon src="assets/images/placeholder.svg"></ion-icon><b >{{data.location}}</b></span>
+          <div class="date-timeelite">
+            <span  *ngIf="data.date"><ion-icon src="assets/images/calendar.svg"></ion-icon><b>{{data?.date}}</b></span>
+            <span  *ngIf="data.time"><ion-icon src="assets/images/clock.svg"></ion-icon><b>{{data?.time}}</b></span>
+          </div>
+        </ion-label>
+      </ion-card-content>
+    </ion-card> -->
+  </div>  
+
+</ion-grid>
+</ion-content>
+
+<!-- <div class="segment-content">
+  <ion-card (click)="gotode(data.id)" *ngFor="let data of allPost">
+    <ion-img [src]="data.easy_gallery_images[0]" class="main-img" ></ion-img>
+    <div class="pricetag" *ngIf="data.price">{{data.price}}</div>
+    <ion-card-content>
+      <h6 *ngIf="data.category">{{data.category}}</h6>
+      <h3>{{data.title}}<ion-img src="assets/images/next.svg"></ion-img></h3>
+      <ion-label>
+        <span *ngIf="data.location"><ion-icon src="assets/images/placeholder.svg"></ion-icon><b >{{data.location}}</b></span>
+        <div class="date-timeelite">
+          <span  *ngIf="data.date"><ion-icon src="assets/images/calendar.svg"></ion-icon><b>{{data?.date}}</b></span>
+          <span  *ngIf="data.time"><ion-icon src="assets/images/clock.svg"></ion-icon><b>{{data?.time}}</b></span>
+        </div>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+</div> -->

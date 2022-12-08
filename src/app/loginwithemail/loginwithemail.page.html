@@ -1,0 +1,37 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-grid class="ion-padding" >     
+    <form [formGroup]="loginbyemail" (ngSubmit)="login(loginbyemail.value)">
+      <div class="login-top">
+        <h1>Welcome to Elite Life</h1>
+        <ion-item>
+          <!-- <span>+61</span> -->
+          <ion-input class="inputitem" formControlName="username"type="text" placeholder="User Name"></ion-input>
+        </ion-item>
+        <small *ngIf="loginbyemail.get('username').hasError('required') && loginbyemail.get('username').touched">This field is required</small>
+        
+        
+        <small ></small>
+        
+        <ion-item>
+          <!-- <span>+61</span> -->
+          <ion-input class="inputitem" formControlName="password" type="password" placeholder="Password"></ion-input>
+        </ion-item>
+        <small *ngIf="loginbyemail.get('password').hasError('required') && loginbyemail.get('password').touched">This field is required</small>
+        <ion-button color="secondary" class="ion-text-uppercase" type="submit" [disabled]="!loginbyemail.valid" >Login</ion-button>
+        <ion-text color="primary">
+          <a class="log-link" routerLink="/login">login with Number</a>
+        </ion-text>  
+      </div>
+      <div class="login-bottom">
+        <a href="javascript:void(0);" class="not-a-member">Not a Member?</a>
+        <ion-button class="enquirenow" (click)="navCtrl.navigateForward('contactform/null')">Enquire Now</ion-button>
+      </div>
+    </form>
+  </ion-grid>
+</ion-content>

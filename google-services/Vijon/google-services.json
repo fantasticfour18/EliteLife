@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "414913166180",
+    "project_id": "elitelife-42bc9",
+    "storage_bucket": "elitelife-42bc9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414913166180:android:c900eca468950e9cde9871",
+        "android_client_info": {
+          "package_name": "io.elitelife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414913166180-smelld2uhe3o2a7aikeps9el6aoss0b3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDozewZVCOfnvtIvaDP5Iacpdhhu4lSbLc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414913166180-smelld2uhe3o2a7aikeps9el6aoss0b3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

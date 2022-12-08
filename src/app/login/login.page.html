@@ -1,0 +1,48 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-grid class="ion-padding" *ngIf="!loginField">     
+    <form [formGroup]="loginbynumber" (ngSubmit)="login(loginbynumber.value)">
+      <div class="login-top">
+        <h1>Welcome to Elite Life</h1>
+        <ion-item>
+          <span>+61</span>
+          <ion-input class="inputitem" formControlName="number"type="text" pattern="[0-9]*" minlength="8"  maxlength="14"></ion-input>
+        </ion-item>
+        <small *ngIf="loginbynumber.get('number').hasError('required') && loginbynumber.get('number').touched">This field is required</small>
+        <ion-button color="secondary" class="ion-text-uppercase" type="submit" [disabled]="!loginbynumber.valid" >send code</ion-button>
+        <ion-text color="primary">
+          <a class="log-link" routerLink="/loginwithemail">login by email</a>
+        </ion-text>  
+      </div>
+      <div class="login-bottom">
+        <a href="javascript:void(0);" class="not-a-member">Not a Member?</a>
+        <ion-button class="enquirenow" (click)="navCtrl.navigateForward('contactform/null')">Enquire Now</ion-button>
+      </div>
+    </form>
+  </ion-grid>
+  <ion-grid class="ion-padding" *ngIf="loginField">     
+    <form [formGroup]="verifybynumber" (ngSubmit)="verify(verifybynumber.value)">
+      <div class="login-top">
+        <h1>Welcome to Elite Life</h1>
+        <ion-item>
+          <!-- <span>+61</span> -->
+          <ion-input class="inputitem" formControlName="otp"type="text" pattern="[0-9]*" minlength="4"  maxlength="4" placeholder="OTP"></ion-input>
+        </ion-item>
+        <small *ngIf="verifybynumber.get('otp').hasError('required') && verifybynumber.get('otp').touched">This field is required</small>
+        <ion-button color="secondary" class="ion-text-uppercase" type="submit" [disabled]="!verifybynumber.valid" >Verify</ion-button>
+        <ion-text color="primary" >
+          <a class="log-link" (click)="loginFieldShow()">Cancel</a>
+        </ion-text> 
+      </div>
+      <div class="login-bottom">
+        <a href="#" class="not-a-member">Not a Member?</a>
+        <ion-button class="enquirenow" >Enquire Now</ion-button>
+      </div>
+    </form>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="navCtrl.back()">
+      <ion-img class="back-btn" src="assets/images/back.svg"></ion-img>
+    </ion-buttons>
+    <ion-title>Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-grid>
+  <ion-img src="assets/images/app-logo.png"></ion-img>
+  <div class="divclasss">
+  <form [formGroup]="contact">
+  <div class="delivery-address">
+
+    <ion-textarea mode="md" rows="5" placeholder="Message" formControlName="message"></ion-textarea>
+  </div>
+</form>
+</div>
+  <div class="login-bottom">  
+    <ion-button class="enquirenow" [disabled]="!contact.valid" (click)="sendmsg(contact.value)">Send</ion-button>
+  </div>
+  </ion-grid>
+</ion-content>

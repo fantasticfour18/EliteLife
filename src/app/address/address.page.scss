@@ -1,0 +1,98 @@
+ion-toolbar {
+    --padding-start: 15px;
+    --padding-end: 8px;
+    text-transform: capitalize;
+    --background: #fff;
+    ion-title {
+        font-size: 20px;
+        font-family: 'Azo Sans Lt';
+    text-align: center;
+    font-weight:300;
+    }
+}
+
+ion-grid ion-img {
+    max-width: 90px;
+    display: block;
+    margin: 15px auto 0;
+}
+
+ion-input , ion-select{
+    background: #fafafa !important;
+    border-radius: 10px;
+    height: 50px;
+    --padding-start: 15px!important;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: 'Azo Sans Lt';
+    color: #000;
+    --placeholder-opacity: 1;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: 'Azo Sans Lt';
+    display: block;
+    text-align: center;
+    margin-bottom: 18px;
+    margin-top: 30px;
+}
+
+
+
+section {
+    display: flex;
+    gap: 12px;
+}
+
+ion-grid {
+    padding: 15px;
+}
+
+ion-item ion-label {
+    font-family: 'Azo Sans Lt'!important;
+    font-size: 16px;
+}
+
+ion-item {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    --inner-border-width: 0;
+    width: auto;
+    margin: 0 auto 20px;
+    --min-height: 0px;
+}
+
+ion-img.back-btn {
+    height: auto!important;
+    width: 17px;
+}
+
+ion-checkbox.ion-color.md {
+    margin: 0 5px 0 0;
+    --border-radius: 10px;
+}
+
+section span {
+    width: 50%;
+}
+ion-button.enquirenow {
+    --background: #ab814b;
+    color: #ffffff;
+    --border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Azo Sans";
+    font-weight: bold;
+    letter-spacing: 1px;
+    --box-shadow: none;
+    margin-top: 10px;
+}
+
+.same-address {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="navCtrl.back()">
+      <ion-img src="assets/images/Arrow_icon.png"></ion-img>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button routerLink="/tabs/search" >
+        <ion-img src="assets/images/icon-search.png" class="srch"></ion-img>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>T&C</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-grid>
+  <ion-img src="assets/images/app-logo.png"></ion-img>
+  <div class="privacy-text">
+    <p [innerHTML]="contant?.content"></p>
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+  </div>
+</ion-grid>
+</ion-content>
